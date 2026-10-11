@@ -1,7 +1,7 @@
 export const profile = {
   name: "Fesel Chirumban",
-  email: "you@example.com",      // TODO: your real email
-  whatsapp: "254700000000",      // TODO: your number, country code first, no +
+  email: "feselchirumban@gmail.com",      // TODO: your real email
+  whatsapp: "25418564857",      // TODO: your number, country code first, no +
   github: "https://github.com/Frenchman136",
   linkedin: "#",                 // TODO
   bio: [
@@ -17,31 +17,31 @@ export const marquee = ["React", "Tailwind", "GSAP", "Node.js", "Supabase", "Git
 // Drafts: correct each description so it's true. Add screenshots to public/projects/
 export const projects = [
   {
-    title: "Movie Streaming Site",
-    type: "Streaming website",
+    title: "Unit Converter",
+    type: "Utility app",
     client: "Personal project",
-    description: "A MovieBox-style streaming site built with React, Tailwind, Node.js and Supabase.",
-    image: "/projects/streaming.png",
-    live: "#",
-    repo: "https://github.com/Frenchman136",
+    description: "A simple unit converter app built with React, Tailwind, and Node.js.",
+    image: "/projects/unit-converter.png",
+    live: "https://unit-converter-ebon-one.vercel.app",
+    repo: "https://github.com/Frenchman136/Unit-Converter",
   },
   {
     title: "Sound Groove",
     type: "Music and video platform",
     client: "School project",
-    description: "TODO: one sentence on what it does and who it's for.",
-    image: "/projects/soundgroove.png",
-    live: "#",
-    repo: "#",
+    description: "Online Streaming platform for music and videos built with React, Tailwind, Node.js and Supabase.",
+    image: "/projects/sound groove.png",
+    live: "https://accj-hub.vercel.app",
+    repo: "https://github.com/Frenchman136/ACCJ-HUB",
   },
   {
     title: "Luka Health Premiere",
     type: "Health app",
     client: "Personal project",
-    description: "TODO: one sentence on what it does and who it's for.",
+    description: "This is a health app that allows users to book appointments with doctors, view their medical history, and access health tips. Built with React, Tailwind, Node.js and Supabase.",
     image: "/projects/luka.png",
-    live: "#",
-    repo: "#",
+    live: "https://luka-premiere-health-care.vercel.app",
+    repo: "https://github.com/Frenchman136/Luka-Premiere-Health-Care",
   },
 ];
 

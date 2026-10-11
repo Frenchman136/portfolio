@@ -2,15 +2,21 @@ import { services } from "../data/content";
 
 export default function Services() {
   return (
-    <section id="services" className="bg-ink px-5 py-24 text-paper md:px-9">
-      <p className="label mb-12 text-center">● What I can help with</p>
-      <ol className="space-y-2 text-center">
+    <section
+      id="services"
+      className="bg-ink px-4 py-16 text-paper sm:px-6 sm:py-20 md:px-9 md:py-24"
+    >
+      <p className="label mb-8 text-center sm:mb-12">● What I can help with</p>
+      <ol className="space-y-3 text-center sm:space-y-2">
         {services.map((s, i) => (
-          <li key={s} className="service">
-            <span className="mr-3 font-mono text-[10px] text-paper/40">
+          <li
+            key={s}
+            className="service flex flex-wrap items-baseline justify-center gap-x-2"
+          >
+            <span className="font-mono text-[10px] text-paper/40">
               0{i + 1}.
             </span>
-            <span className="service-name text-[clamp(2rem,7vw,5.5rem)] font-extrabold leading-tight transition-colors duration-300">
+            <span className="service-name text-[clamp(1.5rem,7vw,5rem)] font-extrabold leading-tight transition-colors duration-300">
               {s}
             </span>
           </li>

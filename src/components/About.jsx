@@ -6,19 +6,19 @@ export default function About() {
   return (
     <section
       id="about"
-      className="grid gap-10 px-5 py-24 md:grid-cols-2 md:px-9"
+      className="grid gap-8 px-4 py-16 sm:gap-10 sm:px-6 sm:py-20 md:grid-cols-2 md:px-9 md:py-24"
     >
       <div>
-        <h2 className="reveal break-words text-[clamp(2.5rem,12vw,5rem)] font-black leading-[0.9] tracking-tight md:text-[clamp(2.5rem,6vw,6rem)]">
+        <h2 className="reveal break-words text-[clamp(2.3rem,10vw,5.5rem)] font-black leading-[0.9] tracking-tight md:text-[clamp(3rem,6vw,5.5rem)]">
           {first}
           <span className="block pl-[0.3em]">{rest.join(" ")}</span>
         </h2>
-        <div className="reveal mt-10 max-w-md space-y-4 leading-relaxed text-ink-soft md:ml-16">
+        <div className="reveal mt-6 max-w-md space-y-4 leading-relaxed text-ink-soft sm:mt-8 md:ml-16 md:mt-10">
           {profile.bio.map((line) => (
             <p key={line}>{line}</p>
           ))}
         </div>
-        <div className="mt-10 md:ml-16">
+        <div className="mt-8 md:ml-16 md:mt-10">
           <Typewriter text="Remember: every great project starts as an ugly first draft." />
         </div>
       </div>

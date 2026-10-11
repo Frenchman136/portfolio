@@ -4,24 +4,9 @@ import { useGSAP } from "@gsap/react";
 
 const NAME = "FESEL CHIRUMBAN"; // edit freely
 const projectSlides = [
-  [
-    "/projects/luka.png",
-    "/projects/unit-converter.png",
-    "/projects/sound groove.png",
-    "/projects/luka.png",
-  ],
-  [
-    "/projects/unit-converter.png",
-    "/projects/sound groove.png",
-    "/projects/luka.png",
-    "/projects/unit-converter.png",
-  ],
-  [
-    "/projects/sound groove.png",
-    "/projects/luka.png",
-    "/projects/unit-converter.png",
-    "/projects/sound groove.png",
-  ],
+  "/projects/luka.png",
+  "/projects/unit-converter.png",
+  "/projects/sound groove.png",
 ];
 
 export default function Hero() {
@@ -58,7 +43,7 @@ export default function Hero() {
   return (
     <section
       ref={root}
-      className="relative flex min-h-screen items-center justify-center overflow-hidden"
+      className="relative flex min-h-[100svh] items-center justify-center overflow-hidden px-3 sm:px-6"
       id="top"
     >
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -103,24 +88,19 @@ export default function Hero() {
       />
 
       {/* headline */}
-      <div className="relative z-10 px-4 text-center">
-        <h1 className="hero-line flex items-center justify-center gap-[0.25em] text-[clamp(2.5rem,9vw,8rem)] font-black uppercase leading-[0.95] tracking-tight">
+      <div className="relative z-10 w-full max-w-[1100px] px-2 text-center">
+        <h1 className="hero-line flex flex-wrap items-center justify-center gap-[0.18em] text-[clamp(2.2rem,9vw,8rem)] font-black uppercase leading-[0.82] tracking-[-0.06em] text-ink/80 sm:gap-[0.22em]">
           <span>code</span>
-          <div className="flex h-[0.7em] w-[1.2em] items-center justify-center overflow-hidden rounded-md bg-accent shadow-[0_6px_18px_rgba(0,0,0,0.12)]">
-            <div className="grid h-full w-full grid-cols-2 gap-[1px] overflow-hidden bg-[#f8f3ee]">
-              {projectSlides[slideIndex].map((src, idx) => (
-                <img
-                  key={`${slideIndex}-${idx}`}
-                  src={src}
-                  alt=""
-                  className="h-full w-full object-cover"
-                />
-              ))}
-            </div>
+          <div className="flex h-[0.8em] w-[1.15em] min-h-[2.5rem] min-w-[2.5rem] items-center justify-center overflow-hidden rounded-md bg-accent shadow-[0_6px_18px_rgba(0,0,0,0.12)] sm:h-[0.78em] sm:w-[1.1em]">
+            <img
+              src={projectSlides[slideIndex]}
+              alt=""
+              className="h-full w-full object-cover"
+            />
           </div>
           <span>build</span>
         </h1>
-        <h2 className="hero-line mt-1 text-[clamp(1.4rem,5.2vw,4.5rem)] font-extrabold uppercase leading-none tracking-tight">
+        <h2 className="hero-line mx-auto mt-2 max-w-[22ch] text-[clamp(1rem,3.4vw,4.5rem)] font-extrabold uppercase leading-[1.08] tracking-[-0.04em] text-ink/75 sm:max-w-[30ch]">
           Student by day, developer by night.
         </h2>
       </div>
@@ -128,7 +108,7 @@ export default function Hero() {
       {/* scroll cue */}
       <a
         href="#about"
-        className="cue label absolute bottom-6 left-1/2 z-20 -translate-x-1/2"
+        className="cue label absolute bottom-6 left-1/2 z-20 -translate-x-1/2 text-gray-200/90"
       >
         Meet {NAME.split(" ")[0]} ↓
       </a>

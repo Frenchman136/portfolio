@@ -94,6 +94,7 @@ export default function Hero() {
     <section
       ref={root}
       className="relative flex min-h-screen items-center justify-center overflow-hidden"
+      id="top"
     >
       {/* sky */}
       <div
@@ -115,12 +116,6 @@ export default function Hero() {
       />
 
       {/* logo */}
-      <p className="absolute left-5 top-4 z-20 text-sm font-extrabold leading-[0.9] tracking-tighter">
-        {NAME.split(" ").map((w) => (
-          <span key={w} className="block lowercase">{w}</span>
-        ))}
-      </p>
-
       {stickers.map((s) => <Sticker key={s.id} s={s} />)}
 
       {/* headline */}

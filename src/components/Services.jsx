@@ -6,9 +6,11 @@ export default function Services() {
       <p className="label mb-12 text-center">● What I can help with</p>
       <ol className="space-y-2 text-center">
         {services.map((s, i) => (
-          <li key={s} className="group">
-            <span className="mr-3 font-mono text-[10px] text-paper/40">0{i + 1}.</span>
-            <span className="text-[clamp(2rem,7vw,5.5rem)] font-extrabold leading-tight text-paper/35 transition-colors duration-300 group-hover:text-paper">
+          <li key={s} className="service">
+            <span className="mr-3 font-mono text-[10px] text-paper/40">
+              0{i + 1}.
+            </span>
+            <span className="service-name text-[clamp(2rem,7vw,5.5rem)] font-extrabold leading-tight transition-colors duration-300">
               {s}
             </span>
           </li>

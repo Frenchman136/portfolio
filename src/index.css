@@ -25,9 +25,36 @@
 
 @layer components {
   .btn {
-    @apply inline-block rounded-lg bg-ink px-4 py-3 font-mono text-xs uppercase tracking-wider text-paper transition-colors duration-200 hover:bg-accent;
+    @apply inline-flex min-h-11 items-center rounded-lg bg-ink px-4 py-3 font-mono text-xs uppercase tracking-wider text-paper transition-colors duration-200 hover:bg-accent;
   }
   .label {
     @apply font-mono text-xs uppercase tracking-widest;
   }
+}
+
+section[id] {
+  scroll-margin-top: 4rem;
+}
+
+.service-name {
+  color: color-mix(in srgb, var(--color-paper) 35%, transparent);
+}
+.service.is-active .service-name {
+  color: var(--color-paper);
+}
+
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: -0.15em;
+  background: currentColor;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .caret { animation: none; }
 }

@@ -3,7 +3,7 @@ import { profile } from "../data/content";
 export default function Contact() {
   return (
     <section id="contact" className="bg-paper-dark px-5 py-24 md:px-9">
-      <div className="mx-auto max-w-3xl">
+      <div className="reveal mx-auto max-w-3xl">
         <p className="label mb-6">A good idea starts with a hello.</p>
         <h2 className="text-[clamp(2.2rem,6vw,4.5rem)] font-black leading-[1] tracking-tight">
           Let's build something worth showing off.

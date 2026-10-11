@@ -12,23 +12,43 @@ export default function Works() {
         {projects.map((p, i) => (
           <article
             key={p.title}
-            className={`border-b border-ink/30 p-5 md:p-8 ${i % 2 === 0 ? "md:border-r" : ""}`}
+            className={`reveal border-b border-ink/30 p-5 md:p-8 ${i % 2 === 0 ? "md:border-r" : ""}`}
           >
-            <img
-              src={p.image}
-              alt={`${p.title} screenshot`}
-              className="aspect-[16/10] w-full bg-paper-dark object-cover"
-            />
+            <div className="overflow-hidden">
+              <img
+                src={p.image}
+                alt={`${p.title} screenshot`}
+                className="aspect-[16/10] w-full bg-paper-dark object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
             <div className="mt-6 flex items-start justify-between gap-4">
-              <h3 className="text-3xl font-extrabold tracking-tight">{p.title}</h3>
+              <h3 className="text-3xl font-extrabold tracking-tight">
+                {p.title}
+              </h3>
               <div className="flex shrink-0 gap-1">
-                <a href={p.live} className="btn" target="_blank" rel="noreferrer">View</a>
-                <a href={p.repo} className="btn" target="_blank" rel="noreferrer">Code</a>
+                <a
+                  href={p.live}
+                  className="btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View
+                </a>
+                <a
+                  href={p.repo}
+                  className="btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Code
+                </a>
               </div>
             </div>
             <p className="mt-2 text-lg">{p.type}</p>
             <p className="mt-1">Client: {p.client}</p>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-ink-soft">{p.description}</p>
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-ink-soft">
+              {p.description}
+            </p>
           </article>
         ))}
       </div>

@@ -4,9 +4,24 @@ import { useGSAP } from "@gsap/react";
 
 const NAME = "FESEL CHIRUMBAN"; // edit freely
 const projectSlides = [
-  ["/projects/luka.png", "/projects/unit-converter.png", "/projects/sound groove.png", "/projects/luka.png"],
-  ["/projects/unit-converter.png", "/projects/sound groove.png", "/projects/luka.png", "/projects/unit-converter.png"],
-  ["/projects/sound groove.png", "/projects/luka.png", "/projects/unit-converter.png", "/projects/sound groove.png"],
+  [
+    "/projects/luka.png",
+    "/projects/unit-converter.png",
+    "/projects/sound groove.png",
+    "/projects/luka.png",
+  ],
+  [
+    "/projects/unit-converter.png",
+    "/projects/sound groove.png",
+    "/projects/luka.png",
+    "/projects/unit-converter.png",
+  ],
+  [
+    "/projects/sound groove.png",
+    "/projects/luka.png",
+    "/projects/unit-converter.png",
+    "/projects/sound groove.png",
+  ],
 ];
 
 export default function Hero() {

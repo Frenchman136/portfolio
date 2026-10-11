@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+@theme {
+  --color-paper: #ece8e3;
+  --color-paper-dark: #d9d4cc;
+  --color-ink: #121212;
+  --color-ink-soft: #6b6762;
+  --color-accent: #e5432d;
+
+  --font-display: "Montserrat", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-display);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block rounded-lg bg-ink px-4 py-3 font-mono text-xs uppercase tracking-wider text-paper transition-colors duration-200 hover:bg-accent;
+  }
+  .label {
+    @apply font-mono text-xs uppercase tracking-widest;
+  }
+}

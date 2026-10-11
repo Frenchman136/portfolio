@@ -2,20 +2,45 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-const NAME = "Fesel Chirumban"; // edit freely
+const NAME = "FESEL CHIRUMBAN"; // edit freely
 
 // src is optional: until the PNG exists, the emoji placeholder shows
 const stickers = [
-  { id: "laptop", src: "/stickers/laptop.png", emoji: "💻", rotate: -12,
-    style: { top: "5%", left: "5%", width: "clamp(80px, 15vw, 220px)" } },
-  { id: "keys", src: "/stickers/keyboard.png", emoji: "⌨️", rotate: 10,
-    style: { top: "4%", right: "4%", width: "clamp(100px, 22vw, 340px)" } },
-  { id: "phones", src: "/stickers/headphones.png", emoji: "🎧", rotate: -8,
-    style: { bottom: "10%", left: "3%", width: "clamp(80px, 15vw, 210px)" } },
-  { id: "ball", src: "/stickers/football.png", emoji: "⚽", rotate: 14,
-    style: { bottom: "7%", left: "42%", width: "clamp(70px, 12vw, 170px)" } },
-  { id: "phone", src: "/stickers/phone.png", emoji: "📱", rotate: -6,
-    style: { bottom: "8%", right: "4%", width: "clamp(80px, 14vw, 200px)" } },
+  {
+    id: "laptop",
+    src: "/stickers/laptop.webp",
+    emoji: "💻",
+    rotate: -10,
+    style: { top: "12%", left: "5%", width: "clamp(90px, 15vw, 210px)" },
+  },
+  {
+    id: "guitar",
+    src: "/stickers/guitar.webp",
+    emoji: "🎸",
+    rotate: 16,
+    style: { bottom: "4%", right: "3%", width: "clamp(60px, 8vw, 125px)" },
+  },
+  {
+    id: "phones",
+    src: "/stickers/headphones.webp",
+    emoji: "🎧",
+    rotate: -8,
+    style: { bottom: "9%", left: "4%", width: "clamp(90px, 14vw, 200px)" },
+  },
+  {
+    id: "notes",
+    src: "/stickers/notebook.webp",
+    emoji: "📓",
+    rotate: 12,
+    style: { bottom: "6%", left: "36%", width: "clamp(70px, 10vw, 140px)" },
+  },
+  {
+    id: "camera",
+    src: "/stickers/camera.webp",
+    emoji: "📷",
+    rotate: -6,
+    style: { bottom: "7%", right: "17%", width: "clamp(70px, 10vw, 150px)" },
+  },
 ];
 
 const outline = {
@@ -40,7 +65,10 @@ function Sticker({ s }) {
           />
         ) : null}
         <div
-          style={{ display: s.src ? "none" : "block", fontSize: "clamp(3rem,8vw,6rem)" }}
+          style={{
+            display: s.src ? "none" : "block",
+            fontSize: "clamp(3rem,8vw,6rem)",
+          }}
           className="text-center"
         >
           {s.emoji}
@@ -60,14 +88,24 @@ export default function Hero() {
       mm.add("(prefers-reduced-motion: no-preference)", () => {
         // 1. entrance
         const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-        tl.from(".hero-line", { y: 70, opacity: 0, duration: 0.9, stagger: 0.15 })
+        tl.from(".hero-line", {
+          y: 70,
+          opacity: 0,
+          duration: 0.9,
+          stagger: 0.15,
+        })
           .from(
             ".sticker",
             {
-              y: -120, scale: 0.5, opacity: 0, rotate: -20,
-              duration: 0.9, stagger: 0.12, ease: "back.out(1.7)",
+              y: -120,
+              scale: 0.5,
+              opacity: 0,
+              rotate: -20,
+              duration: 0.9,
+              stagger: 0.12,
+              ease: "back.out(1.7)",
             },
-            "-=0.6"
+            "-=0.6",
           )
           .from(".cue", { opacity: 0, y: 10, duration: 0.6 }, "-=0.2");
 
@@ -87,7 +125,7 @@ export default function Hero() {
 
       return () => mm.revert();
     },
-    { scope: root }
+    { scope: root },
   );
 
   return (
@@ -100,7 +138,8 @@ export default function Hero() {
       <div
         className="absolute inset-x-0 top-0 h-3/5"
         style={{
-          background: "linear-gradient(180deg, #9ec5e8 0%, #f3c7a8 70%, transparent 100%)",
+          background:
+            "linear-gradient(180deg, #9ec5e8 0%, #f3c7a8 70%, transparent 100%)",
           maskImage: "linear-gradient(to bottom, black 55%, transparent)",
           WebkitMaskImage: "linear-gradient(to bottom, black 55%, transparent)",
         }}
@@ -116,7 +155,9 @@ export default function Hero() {
       />
 
       {/* logo */}
-      {stickers.map((s) => <Sticker key={s.id} s={s} />)}
+      {stickers.map((s) => (
+        <Sticker key={s.id} s={s} />
+      ))}
 
       {/* headline */}
       <div className="relative z-10 px-4 text-center">
@@ -131,7 +172,10 @@ export default function Hero() {
       </div>
 
       {/* scroll cue */}
-      <a href="#about" className="cue label absolute bottom-6 left-1/2 z-20 -translate-x-1/2">
+      <a
+        href="#about"
+        className="cue label absolute bottom-6 left-1/2 z-20 -translate-x-1/2"
+      >
         Meet {NAME.split(" ")[0]} ↓
       </a>
     </section>

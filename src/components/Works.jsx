@@ -18,6 +18,10 @@ export default function Works() {
               <img
                 src={p.image}
                 alt={`${p.title} screenshot`}
+                width="1600"
+                height="1000"
+                loading="lazy"
+                decoding="async"
                 className="aspect-[16/10] w-full bg-paper-dark object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>

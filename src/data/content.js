@@ -3,7 +3,7 @@ export const profile = {
   email: "feselchirumban@gmail.com",      // TODO: your real email
   whatsapp: "25418564857",      // TODO: your number, country code first, no +
   github: "https://github.com/Frenchman136",
-  linkedin: "#",                 // TODO
+  linkedin: "www.linkedin.com/in/fesel-chirumban",                 // TODO
   bio: [
     "Hello, I'm Fesel.",
     "A computer science student and aspiring professional web and mobile developer based in Nakuru, Kenya.",
@@ -42,6 +42,15 @@ export const projects = [
     image: "/projects/luka.png",
     live: "https://luka-premiere-health-care.vercel.app",
     repo: "https://github.com/Frenchman136/Luka-Premiere-Health-Care",
+  },
+  {
+    title: "Macha",
+    type: "Creative agency website",
+    client: "Machakos Creatives",
+    description: "This is a creative agency website for Machakos Creatives. Built with React, Tailwind, and Node.js.",
+    image: "/projects/mcca.png",
+    live: "https://machakos-creatives-m6vj.vercel.app",
+    repo: "https://github.com/Frenchman136/Machakos-Creatives",
   },
 ];
 
